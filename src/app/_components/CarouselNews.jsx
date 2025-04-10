@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import Link from 'next/link';
 import { NewsData } from '@/data/NewsData';
 import Image from 'next/image';
+import { TrimString } from '@/utils/StringManipulation';
 
 
 export default function CarouselNews({ slides }) {
@@ -68,7 +69,7 @@ export default function CarouselNews({ slides }) {
         {data.map((i, key) => (
           <SwiperSlide key={key} className='pt-4 pb-2 px-2'>
             <section className='w-[100%] rounded-xl bg-white ease-linear transition-all drop-shadow hover:drop-shadow-lg'>
-                <div className='bg-gray-300 w-[100%] rounded-t-xl lg:aspect-[4/3] aspect-[5/3] flex items-center justify-center'>
+                <div className='bg-gray-300 overflow-hidden w-[100%] rounded-t-xl lg:aspect-[4/3] aspect-[5/3] flex items-center justify-center'>
                      <div className="relative w-[100%] h-[100%]">
                         <Image
                           src={i?.img}
@@ -79,8 +80,12 @@ export default function CarouselNews({ slides }) {
                       </div>
                 </div>
                 <div className="w-[100%] pt-8 pb-6 px-4">
-                    <p className='tracking-[1.5px] font-medium text-sm text-[#aa1845] mb-4'>{i?.category}</p>
-                    <h3 className='text-2xl font-serif leading-tight mb-6'>{i?.title}</h3>
+                    <p className='tracking-[1.5px] font-medium text-sm text-[#aa1845] mb-4'>
+                      {i?.category}
+                    </p>
+                    <h3 className='text-2xl font-serif leading-tight mb-6'>
+                      { TrimString(i?.title, 20) }
+                    </h3>
                     <Link href="#">
                         <button className='group mb-2 hover:border-b hover:border-[#aa1845] hover:text-[#aa1845] transition-all ease-linear text-lg flex items-center justify-start gap-2 font-light'>
                             Read More

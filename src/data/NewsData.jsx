@@ -27,6 +27,7 @@ export const NewsData = [
     },
     { 
         id: 3, 
+        category: 'Payments',
         title: 'Our Business Interests', 
         detail: `We offer products and services as one integrated institution while treating 
         our clients as one global relationship.`, 
