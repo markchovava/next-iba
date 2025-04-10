@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { GoDotFill, GoDot } from "react-icons/go";
@@ -13,6 +13,7 @@ import Link from 'next/link';
 
 export default function CarouselEvents({ slides }) {
   const swiperRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const totalSlides = 8; // Update this based on your actual slide count
 
@@ -26,6 +27,23 @@ export default function CarouselEvents({ slides }) {
       swiperRef.current.swiper.slideTo(index);
     }
   };
+
+
+  useEffect(() => {
+    // This code will only run on the client-side
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize); // Cleanup
+    };
+  }, []); 
+
+
+
+
 
   return (
     <div className="carousel-container w-full mx-auto">
@@ -78,14 +96,14 @@ export default function CarouselEvents({ slides }) {
         {/* Custom React-based pagination dots */}
         {<div className="custom-pagination flex items-center justify-center gap-3 mb-4">
           {
-          Array.from({ length: Math.ceil(totalSlides / (window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1)) }).map((_, index) => (
+          Array.from({ length: Math.ceil(totalSlides / (windowWidth >= 1024 ? 3 : windowWidth >= 640 ? 2 : 1)) }).map((_, index) => (
             <button
               key={index}
-              onClick={() => handlePaginationClick(index * (window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1))}
+              onClick={() => handlePaginationClick(index * (windowWidth >= 1024 ? 3 : windowWidth >= 640 ? 2 : 1))}
               className="pagination-dot focus:outline-none"
               aria-label={`Go to slide group ${index + 1}`}
             >
-              {index === Math.floor(activeIndex / (window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1)) ? (
+              {index === Math.floor(activeIndex / (windowWidth >= 1024 ? 3 : windowWidth >= 640 ? 2 : 1)) ? (
                 <GoDotFill className="w-5 h-5 text-blue-500" />
               ) : (
                 <GoDot className="w-5 h-5 text-gray-300" />

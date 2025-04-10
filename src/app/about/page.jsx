@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaArrowRightLong } from 'react-icons/fa6'
@@ -10,7 +11,16 @@ export default function page() {
             <p className='text-gray-300 font-medium text-xl'>ABOUT US</p>
             <h2 className='text-4xl leading-tight'>A bank built for a world of complexity</h2>
         </div>
-        <div className='w-[100%] h-[100%] rounded-l-3xl bg-gray-400'></div>
+        <div className='w-[100%] h-[100%] overflow-hidden rounded-l-3xl bg-gray-400'>
+          <div className="relative w-[100%] h-[100%]">
+            <Image
+              src='/assets/img/a03.jpg'
+              alt="Full Cover Image"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </div>
     </section>
 
 
@@ -30,7 +40,16 @@ export default function page() {
 
     <section className='w-[100%]'>
         <div className='mx-auto overflow-hidden rounded-3xl lg:p-[3rem] lg:pb-[3rem] p-[2.5rem] pb-[2.5rem] lg:w-[65%] w-[90%] text-gray-100 bg-gradient-to-br from-[#aa1845] to-[#5c041e]'>
-            <div className='w-[100%] rounded-2xl lg:aspect-[5/2] aspect-[5/3] bg-gray-300'></div>
+            <div className='w-[100%] rounded-2xl overflow-hidden aspect-[5/3] bg-gray-300'>
+              <div className="relative  w-[100%] h-[100%]">
+              <Image
+                src='/assets/img/02.jpg'
+                alt="Full Cover Image"
+                layout="fill"
+                objectFit="cover"
+              />
+              </div>
+            </div>
             <div className='pt-8'>
                 <h3 className='text-4xl mb-4'>Our Mission</h3>
                 <p className='text-xl leading-tight'>
@@ -61,7 +80,16 @@ export default function page() {
           </button>
         </Link>
       </div>
-      <div className="w-[100%] lg:rounded-l-2xl lg:aspect-[4/3] aspect-[5/3] bg-gray-400"></div>
+      <div className="w-[100%] overflow-hidden lg:rounded-l-2xl lg:aspect-[4/3] aspect-[5/3] bg-gray-400">
+          <div className="relative w-[100%] h-[100%]">
+              <Image
+                src='/assets/img/04.jpg'
+                alt="Full Cover Image"
+                layout="fill"
+                objectFit="cover"
+              />
+              </div>
+      </div>
     </div>
    </section>
 
@@ -69,7 +97,16 @@ export default function page() {
 
     <section className='w-[100%] pt-[1rem] pb-[6rem]'>
         <div className='mx-auto lg:w-[94%] w-[90%] overflow-hidden rounded-2xl bg-gray-200 drop-shadow-lg grid lg:grid-cols-2 grid-cols-1'>
-            <div className='w-[100%] h-[100%] bg-gray-400'></div>
+            <div className='w-[100%] h-[100%] bg-gray-400'>
+              <div className="relative w-[100%] h-[100%]">
+                <Image
+                  src='/assets/img/a01.jpg'
+                  alt="Full Cover Image"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </div>
             <div className='w-[100%] flex flex-col gap-8 items-start justify-center lg:pl-8 px-8 py-12'>
                 <p className="uppercase px-2 text-[#aa1845] font-semibold">Wealth Management</p>
                 <h1 className=" px-2 leading-[3rem] text-[2.6rem]">Personalize your investment experience</h1>

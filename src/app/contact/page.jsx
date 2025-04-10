@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
 import { FaAngleRight } from "react-icons/fa";
@@ -8,6 +9,8 @@ import { IoSearch } from "react-icons/io5";
 export default function page() {
     const months = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
+
+
   return (
     <>
     {/* HEADER */}
@@ -19,7 +22,16 @@ export default function page() {
             For general inquiries regarding, please call (123) 34543232.
             </h2>
         </div>
-        <div className='w-[100%] h-[100%] rounded-l-3xl bg-gray-400'></div>
+        <div className='w-[100%] h-[100%] overflow-hidden rounded-l-3xl bg-gray-400'>
+            <div className="relative w-[100%] h-[100%]">
+            <Image
+                src='/assets/img/a03.jpg'
+                alt="Full Cover Image"
+                layout="fill"
+                objectFit="cover"
+            />
+            </div>
+        </div>
     </section>
 
     <section className='w-[100%] grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1'>
@@ -125,7 +137,7 @@ export default function page() {
                         <Link href='#' className='group'>
                         <button className='flex items-start justify-center gap-2 duration-150 ease-linear transition-all hover:text-[#aa1845]'>
                             <span className='pb-2 duration-150 ease-linear transition-all group-hover:border-b-2 border-[#aa1845]'>
-                                Read more
+                                View more
                             </span>
                             <FaAngleRight className='mt-1 duration-150 ease-linear transition-all group-hover:translate-x-1' />
                         </button>
@@ -146,7 +158,7 @@ export default function page() {
                         <Link href='#' className='group'>
                         <button className='flex items-start justify-center gap-2 duration-150 ease-linear transition-all hover:text-[#aa1845]'>
                             <span className='pb-2 duration-150 ease-linear transition-all group-hover:border-b-2 border-[#aa1845]'>
-                                Read more
+                                View more
                             </span>
                             <FaAngleRight className='mt-1 duration-150 ease-linear transition-all group-hover:translate-x-1' />
                         </button>
@@ -165,7 +177,7 @@ export default function page() {
                         <Link href='#' className='group'>
                         <button className='flex items-start justify-center gap-2 duration-150 ease-linear transition-all hover:text-[#aa1845]'>
                             <span className='pb-2 duration-150 ease-linear transition-all group-hover:border-b-2 border-[#aa1845]'>
-                                Read more
+                                View more
                             </span>
                             <FaAngleRight className='mt-1 duration-150 ease-linear transition-all group-hover:translate-x-1' />
                         </button>

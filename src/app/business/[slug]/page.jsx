@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaArrowRightLong } from 'react-icons/fa6'
@@ -19,7 +20,16 @@ export default function page() {
                 </button>
             </Link>
         </div>
-        <div className='w-[100%] h-[100%] rounded-l-3xl bg-gray-400'></div>
+        <div className='w-[100%] h-[100%] overflow-hidden rounded-l-3xl bg-gray-400'>
+            <div className="relative w-[100%] h-[100%]">
+                <Image
+                    src='/assets/img/a04.jpg'
+                    alt="Full Cover Image"
+                    layout="fill"
+                    objectFit="cover"
+                />
+            </div>
+        </div>
     </section>
 
     <section className='w-[100%]'>

@@ -1,8 +1,9 @@
 import Link from "next/link";
-import Carousel from "./_components/CarouselService";
+import CarouselService from "./_components/CarouselService";
 import HomeSlider from "./_components/HomeSlider";
 import { FaArrowRightLong } from "react-icons/fa6";
 import CarouselNews from "./_components/CarouselNews";
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -11,7 +12,14 @@ export default function Page() {
 
    <section className="bg-[#750b2b] text-gray-50 py-[6rem]">
       <div className="bg-[#aa1845] lg:rounded-3xl overflow-hidden mx-auto w-[93%] grid lg:grid-cols-2 grid-cols-1">
-        <div className="w-[100%] h-[100%] bg-gray-400"></div>
+        <div className="overflow-hidden relative w-[100%] h-[100%] bg-gray-400">
+          <Image
+            src="/assets/img/04.jpg"
+            alt="Full Cover Image"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
         <div className='w-[100%] flex flex-col gap-8 items-start justify-center lg:pl-8 px-8 py-12'>
           <p className="uppercase text-gray-300 font-semibold">Wealth Management</p>
           <h1 className="leading-[3rem] text-[2.6rem]">Personalize your investment experience</h1>
@@ -37,7 +45,7 @@ export default function Page() {
             institution while treating our clients as one global relationship.
           </p>
         </div>
-        <Carousel slides={4} />
+        <CarouselService slides={4} />
       </div>
    </section>
 
@@ -58,7 +66,16 @@ export default function Page() {
           </button>
         </Link>
       </div>
-      <div className="w-[100%] lg:rounded-l-2xl lg:aspect-[4/3] aspect-[5/3] bg-gray-400"></div>
+      <div className="w-[100%] overflow-hidden lg:rounded-l-2xl lg:aspect-[4/3] aspect-[5/3] bg-gray-400 drop-shadow-lg">
+        <div className="w-[100%] h-[100%]">
+            <Image
+              src="/assets/img/02.jpg"
+              alt="Full Cover Image"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+      </div>
     </div>
    </section>
 
@@ -66,7 +83,16 @@ export default function Page() {
     {/*  */}
     <section className="w-[100%]">
     <div className="mx-auto w-[100%] grid lg:grid-cols-2 grid-col-reverse grid-cols-1 gap-4 lg:pt-[5rem] lg:pb-[5rem]">
-      <div className="lg:order-1 order-2 w-[100%] lg:rounded-r-2xl lg:aspect-[4/3] aspect-[5/3] bg-gray-400"></div>
+      <div className="relative drop-shadow-lg lg:order-1 order-2 w-[100%] overflow-hidden lg:rounded-r-2xl lg:aspect-[4/3] aspect-[5/3] bg-gray-400">
+          <div className="relative w-[100%] h-[100%]">
+            <Image
+              src="/assets/img/01.jpg"
+              alt="Full Cover Image"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+      </div>
       <div className="order-1 lg:order-2 pl-[8%] w-[100%] flex flex-col items-start justify-center lg:py-4 lg:pb-8 pb-16">
         <p className="uppercase px-2 mb-10 text-[#aa1845] font-semibold">Wealth Management</p>
         <h1 className="mb-10 px-2 leading-[3rem] text-[2.6rem]">Personalize your investment experience</h1>

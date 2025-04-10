@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { GoDotFill, GoDot } from "react-icons/go";
@@ -9,9 +9,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from 'next/link';
+import Image from 'next/image';
+import { SliderData } from '@/data/SliderData';
+
+
 
 
 export default function HomeSlider() {
+  const [data, setData] = useState(SliderData)
+  const [windowWidth, setWindowWidth] = useState(0);
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const totalSlides = 8; // Update this based on your actual slide count
@@ -27,6 +33,22 @@ export default function HomeSlider() {
     }
   };
 
+
+  useEffect(() => {
+    // This code will only run on the client-side
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize); // Cleanup
+    };
+  }, []); 
+
+
+
+
   return (
     <div className="mb-[4rem] relative carousel-container w-full h-auto mx-auto">
       <Swiper
@@ -35,9 +57,9 @@ export default function HomeSlider() {
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
-        speed={1500}
+        speed={3000}
         autoplay={{
-            delay: 4000,
+            delay: 8000,
             disableOnInteraction: true,
         }}
         breakpoints={{
@@ -51,25 +73,33 @@ export default function HomeSlider() {
         className=""
       >
         {/* Sample slides */}
-        {Array.from({ length: totalSlides }).map((_, index) => (
+        {data.map((i, index) => (
           <SwiperSlide key={index}>
             <div className="w-[100vw] lg:aspect-[5/2] aspect-[5/3] grid grid-cols-2 overflow-hidden bg-white">
-              <section className='w-[100%] h-[100%] pl-[8%] flex flex-col items-start justify-center'>
+              <section className='w-[100%] h-[100%] pl-[8%] pr-5 flex flex-col items-start justify-center'>
                 <h2 className='text-5xl mb-3 font-serif'>
-                Letter to Shareholders
+                {i?.title}
                 </h2>
                 <p className='text-lg font-light pr-6 mb-8'>
-                In our 2024 Annual Report, we reflects on the past year and the opportunities that lie ahead for the firm.
+                {i?.detail}
                 </p>
                 <Link href='#' className="group">
-                  <button className=" group flex items-center justify-center gap-1 text-lg px-6 py-3 cursor-pointer group-hover:drop-shadow-md text-[#aa1845] bg-white border border-[#aa1845] rounded-md transition-all ease-linear">
-                    View More <FaArrowRightLong className="transition-all duration-200 ease-linear group-hover:translate-x-1" />
+                  <button className=" group flex items-center justify-center gap-2 text-lg px-6 py-3 cursor-pointer group-hover:drop-shadow-md text-[#aa1845] bg-white border border-[#aa1845] rounded-md transition-all ease-linear">
+                    View More 
+                    <FaArrowRightLong className="transition-all duration-200 ease-linear group-hover:translate-x-1" />
                   </button>
                 </Link>
 
 
               </section>
-              <section className='pr-[8%] w-[100%] h-[100%] bg-[#aa1845] rounded-l-3xl drop-shadow-lg'></section>
+              <section className='overflow-hidden relative w-[100%] h-[100%] bg-[#aa1845] rounded-l-3xl drop-shadow-lg'>
+              <Image
+                  src={i?.img} // Replace with your image path
+                  alt="Full Cover Image"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </section>
             </div>
           </SwiperSlide>
         ))}
@@ -80,14 +110,14 @@ export default function HomeSlider() {
         {/* Custom React-based pagination dots */}
         {<div className="custom-pagination flex items-center justify-center gap-3 mb-4">
           {
-          Array.from({ length: Math.ceil(totalSlides / (window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1)) }).map((_, index) => (
+          Array.from({ length: Math.ceil(totalSlides / (windowWidth >= 1024 ? 3 : windowWidth >= 640 ? 2 : 1)) }).map((_, index) => (
             <button
               key={index}
-              onClick={() => handlePaginationClick(index * (window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1))}
+              onClick={() => handlePaginationClick(index * (windowWidth >= 1024 ? 3 : windowWidth >= 640 ? 2 : 1))}
               className="pagination-dot focus:outline-none"
               aria-label={`Go to slide group ${index + 1}`}
             >
-              {index === Math.floor(activeIndex / (window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1)) ? (
+              {index === Math.floor(activeIndex / (windowWidth >= 1024 ? 3 : windowWidth >= 640 ? 2 : 1)) ? (
                 <GoDotFill className="w-5 h-5 text-blue-500" />
               ) : (
                 <GoDot className="w-5 h-5 text-gray-300" />

@@ -29,11 +29,13 @@ export default function HeaderResponsive() {
     <div className='lg:hidden block'>
         <section className='relative w-[100%]'>
             <div className='mx-auto w-[94%] flex items-center justify-between'>
-                <div className='w-[8rem] bg-gray-200 flex items-center justify-center'>
+                <div className='w-[8rem] flex items-center justify-center'>
+                <Link href='/'>
                     <img 
                         src={`/assets/img/logo.png`}
                         className='w-[100%] object-fit'
                         alt="Logo" /> 
+                </Link>
                 </div>
                 <div>
                 <AnimatePresence>

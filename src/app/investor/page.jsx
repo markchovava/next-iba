@@ -4,6 +4,7 @@ import CarouselEvents from './_components/CarouselEvents'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { FaFilePdf } from "react-icons/fa6";
 import { RiFileExcel2Line } from "react-icons/ri";
+import Image from 'next/image';
 
 export default function page() {
   return (
@@ -15,7 +16,16 @@ export default function page() {
                 Find our investor presentations, annual reports, financial information and news.
             </h2>
         </div>
-        <div className='w-[100%] h-[100%] rounded-l-3xl bg-gray-400'></div>
+        <div className='w-[100%] h-[100%] overflow-hidden rounded-l-3xl bg-gray-400'>
+            <div className="relative w-[100%] h-[100%]">
+            <Image
+                src='/assets/img/a04.jpg'
+                alt="Full Cover Image"
+                layout="fill"
+                objectFit="cover"
+            />
+            </div>
+        </div>
     </section>
 
     <section className='w-[100%] py-[4rem]'>
@@ -295,7 +305,16 @@ export default function page() {
 
     <section className='w-[100%] pb-[6rem]'>
         <div className='mx-auto lg:w-[94%] w-[90%] overflow-hidden rounded-2xl bg-gray-200 drop-shadow-lg grid lg:grid-cols-2 grid-cols-1'>
-            <div className='w-[100%] h-[100%] bg-gray-400'></div>
+            <div className='w-[100%] h-[100%] overflow-hidden bg-gray-400'>
+                <div className="relative w-[100%] h-[100%]">
+                <Image
+                    src='/assets/img/07.jpg'
+                    alt="Full Cover Image"
+                    layout="fill"
+                    objectFit="cover"
+                />
+                </div>
+            </div>
             <div className='w-[100%] flex flex-col gap-8 items-start justify-center text-gray-100 bg-gradient-to-br from-[#aa1845] to-[#5c041e] lg:pl-8 px-8 py-12'>
                 <p className="uppercase px-2 text-gray-300 font-semibold">Wealth Management</p>
                 <h1 className=" px-2 leading-[3rem] text-[2.6rem]">Personalize your investment experience</h1>

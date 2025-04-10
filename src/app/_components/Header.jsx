@@ -6,6 +6,7 @@ import { IoSearch } from "react-icons/io5";
 import { motion, AnimatePresence} from "motion/react"
 import HeaderResponsive from './HeaderResponsive';
 import { OpacityVariants } from '@/utils/MotionAnimations';
+import Image from 'next/image';
 
 
 export default function Header() {
@@ -32,16 +33,18 @@ export default function Header() {
             {/* TOP */}
             <div className='w-[94%] mx-auto flex justify-start items-center gap-8 py-3'>
                 {/* LOGO AREA */}
-                <div className='w-[10%] bg-gray-200 flex items-center justify-center'>
+                <div className='w-[10%] p-1  flex items-center justify-center'>
                     {/* <Image 
                         src={`/assets/img/logo.png`}
                         layout="fill" 
                         objectFit="contain" 
                         alt="Logo" />  */}
+                    <Link href='/'>
                     <img 
                         src={`/assets/img/logo.png`}
                         className='w-[100%] object-fit'
                         alt="Logo" /> 
+                    </Link>
                 </div>
                 <div className='w-[90%] h-[100%] flex justify-between items-center'>
                     <ul className='relative flex items-center justify-start'>
@@ -257,7 +260,16 @@ export default function Header() {
                                     quidem asperiores blanditiis dolore sed, saepe, illum aliquid error.
                                 </p>
                             </div>
-                            <div className='w-[100%] bg-gray-300 h-[15rem]'></div>
+                            <div className='w-[100%] overflow-hidden bg-gray-300 h-[15rem]'>
+                                <div className="relative w-[100%] h-[100%]">
+                                <Image
+                                src='/assets/img/01.jpg'
+                                alt="Full Cover Image"
+                                layout="fill"
+                                objectFit="cover"
+                                />
+                                </div>
+                            </div>
                         </div>
                         <div className='w-[100%] h-[100%] flex items-center justify-start'>
                             <nav className='px-4'>
@@ -355,7 +367,16 @@ export default function Header() {
                                     quidem asperiores blanditiis dolore sed, saepe, illum aliquid error.
                                 </p>
                             </div>
-                            <div className='w-[100%] bg-gray-300 h-[15rem]'></div>
+                            <div className='w-[100%] overflow-hidden bg-gray-300 h-[15rem]'>
+                            <div className="relative w-[100%] h-[100%]">
+                                <Image
+                                    src='/assets/img/a01.jpg'
+                                    alt="Full Cover Image"
+                                    layout="fill"
+                                    objectFit="cover"
+                                />
+                                </div>
+                            </div>
                         </div>
                         <div className='w-[100%] h-[100%] flex items-center justify-start'>
                             <nav className='px-4'>
