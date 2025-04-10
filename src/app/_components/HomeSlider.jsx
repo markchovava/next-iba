@@ -50,7 +50,7 @@ export default function HomeSlider() {
 
 
   return (
-    <div className="mb-[4rem] relative carousel-container w-full h-auto mx-auto">
+    <div className="hidden md:block mb-[4rem] relative carousel-container w-full h-auto mx-auto">
       <Swiper
         ref={swiperRef}
         modules={[Autoplay, Navigation, Pagination]}
@@ -75,16 +75,16 @@ export default function HomeSlider() {
         {/* Sample slides */}
         {data.map((i, index) => (
           <SwiperSlide key={index}>
-            <div className="w-[100vw] lg:aspect-[5/2] aspect-[5/3] grid grid-cols-2 overflow-hidden bg-white">
+            <div className="w-[100vw] lg:aspect-[5/2] md:aspect-[5/3] grid md:grid-cols-2 grid-cols-1 overflow-hidden bg-white">
               <section className='w-[100%] h-[100%] pl-[8%] pr-5 flex flex-col items-start justify-center'>
-                <h2 className='text-5xl mb-3 font-serif'>
+                <h2 className='lg:text-5xl md:text-3xl mb-3 font-serif'>
                 {i?.title}
                 </h2>
                 <p className='text-lg font-light pr-6 mb-8'>
                 {i?.detail}
                 </p>
                 <Link href='#' className="group">
-                  <button className=" group flex items-center justify-center gap-2 text-lg px-6 py-3 cursor-pointer group-hover:drop-shadow-md text-[#aa1845] bg-white border border-[#aa1845] rounded-md transition-all ease-linear">
+                  <button className=" group flex items-center justify-center gap-2 md:text-lg px-6 py-3 cursor-pointer group-hover:drop-shadow-md text-[#aa1845] bg-white border border-[#aa1845] rounded-md transition-all ease-linear">
                     View More 
                     <FaArrowRightLong className="transition-all duration-200 ease-linear group-hover:translate-x-1" />
                   </button>
