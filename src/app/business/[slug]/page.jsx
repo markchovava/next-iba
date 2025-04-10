@@ -23,7 +23,7 @@ export default function page() {
         <div className='w-[100%] h-[100%] overflow-hidden rounded-l-3xl bg-gray-400'>
             <div className="relative w-[100%] h-[100%]">
                 <Image
-                    src='/assets/img/a04.jpg'
+                    src='/assets/img/04.jpg'
                     alt="Full Cover Image"
                     layout="fill"
                     objectFit="cover"
@@ -63,14 +63,32 @@ export default function page() {
                 </button>
             </Link>
             </div>
-            <div className="w-[100%] lg:rounded-l-2xl lg:aspect-[4/3] aspect-[5/3] bg-gray-400"></div>
+            <div className="w-[100%] overflow-hidden lg:rounded-l-2xl lg:aspect-[4/3] aspect-[5/3] bg-gray-400">
+                <div className="relative w-[100%] h-[100%]">
+                    <Image
+                        src='/assets/img/05.jpg'
+                        alt="Full Cover Image"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+            </div>
         </div>
     </section>
 
 
     <section className='w-[100%] pt-[5rem] pb-[6rem]'>
         <div className='mx-auto lg:w-[94%] w-[90%] overflow-hidden rounded-2xl bg-gray-200 drop-shadow-lg grid lg:grid-cols-2 grid-cols-1'>
-            <div className='w-[100%] h-[100%] bg-gray-400'></div>
+            <div className='w-[100%] overflow-hidden h-[100%] bg-gray-400'>
+            <div className="relative w-[100%] h-[100%]">
+                <Image
+                    src='/assets/img/07.jpg'
+                    alt="Full Cover Image"
+                    layout="fill"
+                    objectFit="cover"
+                />
+            </div>
+            </div>
             <div className='w-[100%] flex flex-col gap-8 items-start justify-center lg:pl-8 px-8 py-12'>
                 <p className="uppercase px-2 text-[#aa1845] font-semibold">Wealth Management</p>
                 <h1 className=" px-2 leading-[3rem] text-[2.6rem]">Personalize your investment experience</h1>
