@@ -19,7 +19,7 @@ export default function page() {
         <div className='w-[100%] h-[100%] overflow-hidden rounded-l-3xl bg-gray-400'>
             <div className="relative w-[100%] h-[100%]">
                 <Image
-                    src='/assets/img/a02.jpg'
+                    src='/assets/img/06.jpg'
                     alt="Full Cover Image"
                     layout="fill"
                     objectFit="cover"
