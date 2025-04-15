@@ -42,12 +42,12 @@ export default function page() {
                 </Link>
                 <Link href='#' className=' group'>
                 <li className='px-4 pb-3 group-hover:underline group-hover:text-[#aa1845] group-hover:font-semibold group-hover:translate-x-2 ease-linear transition-all'>
-                    2025
+                    2024
                 </li>
                 </Link>
                 <Link href='#' className=' group'>
                 <li className='px-4 pb-3 group-hover:underline group-hover:text-[#aa1845] group-hover:font-semibold group-hover:translate-x-2 ease-linear transition-all'>
-                    2025
+                    2023
                 </li>
                 </Link>
             </ul>
