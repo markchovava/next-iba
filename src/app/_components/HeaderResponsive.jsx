@@ -89,30 +89,27 @@ export default function HeaderResponsive() {
                             </button>
                             { isActive?.two &&
                             <ul className='text-sm w-[100vw] rounded-b-xl bg-gray-50 drop-shadow flex flex-col items-start justify-start gap-2'>
-                                <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
+                                <Link href='/investor' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1
-                                </li>
+                                Overview </li>
+                                </Link>
+                                <Link href='/contact' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Contact Us</li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1
-                                </li>
-                                </Link>
-                                <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1 </li>
+                                Leadership</li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                     <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1
-                                    </li>
+                                    Strengthening Community</li>
                                 </Link>
                             </ul>
                             }   
                         </li>
-                        <li 
-                            className='relative'>
+                        {/* BUSINESS */}
+                        <li className='relative'>
                             <button 
                                 onClick={() => setIsActive({three: !isActive?.three})}
                                 className='w-[100%] flex items-center justify-center gap-1 px-4 hover:text-[#aa1845] font-semibold tracking-wide transition-all ease-linear'>
@@ -120,28 +117,27 @@ export default function HeaderResponsive() {
                             </button>
                             {isActive?.three &&
                             <ul className='text-sm w-[100vw] bg-gray-50 drop-shadow flex flex-col items-start justify-start gap-2'>
-                                <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
+                                <Link href='/business' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1
+                                Overview
                                 </li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1
-                                </li>
+                                Services </li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1 </li>
+                                Markets </li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                    <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1
-                                    </li>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Banking and International</li>
                                 </Link>
                             </ul>
                             }
                         </li>
+                        {/* NEWS */}
                         <li className='relative'>
                             <button 
                                 onClick={() => setIsActive({four: !isActive?.four})} 
@@ -150,24 +146,25 @@ export default function HeaderResponsive() {
                             </button>
                             { isActive?.four &&
                             <ul className='text-sm w-[100vw] bg-gray-50 drop-shadow flex flex-col items-start justify-start gap-2'>
-                                <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
+                                <Link href='/news' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1
-                                </li>
+                                Overview </li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1
-                                </li>
+                                Press Release</li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1 </li>
+                                Perspectives</li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                    <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1
-                                    </li>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Events</li>
+                                </Link>
+                                <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Media Resources</li>
                                 </Link>
                             </ul>
                             }
@@ -181,24 +178,28 @@ export default function HeaderResponsive() {
                             { isActive?.five &&
                             <ul className='text-sm w-[100vw] bg-gray-50 drop-shadow flex flex-col items-start justify-start gap-2'>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                    <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1
-                                    </li>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Overview </li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                    <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1
-                                    </li>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                SEC Filings </li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                    <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1 
-                                    </li>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Quarterly Earnings </li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                    <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1
-                                    </li>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Annual Reports and Proxy Statements </li>
+                                </Link>
+                                <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Other Regulatory Filings </li>
+                                </Link>
+                                <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Corporate Governance </li>
                                 </Link>
                             </ul>
                             }                   
@@ -211,25 +212,21 @@ export default function HeaderResponsive() {
                             </button>
                             { isActive?.six &&
                             <ul className='text-sm w-[100vw] bg-gray-50 drop-shadow flex flex-col items-start justify-start gap-2'>
+                                <Link href='/career' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Nav 1</li>
+                                </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1
-                                </li>
+                                Teams</li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                    <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1
-                                    </li>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Why IBA? </li>
                                 </Link>
                                 <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                    <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1 
-                                    </li>
-                                </Link>
-                                <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                                    <li className='w-[100%] flex items-center justify-center'>
-                                        Nav 1
-                                    </li>
+                                <li className='w-[100%] flex items-center justify-center'>
+                                Students & Graduates </li>
                                 </Link>
                             </ul>
                             }   
@@ -249,18 +246,15 @@ export default function HeaderResponsive() {
                             </Link>
                             <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1
-                                </li>
+                                Profile </li>
                             </Link>
                             <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1 
-                                </li>
+                                Password </li>
                             </Link>
                             <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
-                                    Nav 1
-                                </li>
+                                Login </li>
                             </Link>
                             </ul>
                             }   
