@@ -240,11 +240,6 @@ export default function HeaderResponsive() {
                             { isActive?.eight &&
                             <ul className='text-sm w-[100vw] bg-gray-50 drop-shadow flex flex-col items-start justify-start gap-2'>
                             <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
-                            <li className='w-[100%] flex items-center justify-center'>
-                                Nav 1
-                            </li>
-                            </Link>
-                            <Link href='#' className='w-[100%] px-4 py-3 transition-all ease-linear duration-200 hover:bg-gray-100 hover:text-[#aa1845]'>
                                 <li className='w-[100%] flex items-center justify-center'>
                                 Profile </li>
                             </Link>
